@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulaire</title>
+</head>
+<body>
+    <div class="form_div">
+        <form id="form_cv" name="form_cv" method="post" action="save.php">
+            <fieldset class="field">
+                <legend>Qui êtes vous ?</legend>
+                <label for="input_nom">Nom  :</label>
+                <input type="text" name="name" id="input_nom" placeholder="Entrez votre nom" pattern="[A-Za-z]{3,}" title="3 caractères au moins" required>
+                <br>
+                <label for="input_email">email :</label>
+                <input type="email" name="email" id="input_email" placeholder="Entrez votre email" required >
+            </fieldset>
+            <fieldset class="field">
+                <legend>Quel est votre message ?</legend>
+                <label for="theme">Thème de votre message :</label>
+                <div class="theme">
+                    <select id="theme" name="theme">
+                        <option value="Travail de recherche">Je vous contacte à propos de vos travaux de recherche</option>
+                        <option value="Un emploi">Je vous contacte à propos d'un emploi</option>
+                        <option value="Une ancienne connaissance">Je vous contacte, car je suis une ancienne connaissance</option>
+                        <option value="Autre raison" id="autre">Autre raison</option>
+                    </select>
+                    <input type="text" name="autreoption" id="autreoption" placeholder="Entrez votre option">
+                </div>
+                <div class="message">
+                    <label for="message">Votre message :</label>
+                    <br>
+                    <textarea name="message" id="textarea_message" cols="30" rows="5" placeholder="Entrez votre message de motivation"></textarea>
+                </div>
+            </fieldset>
+            <fieldset class="field">
+                <legend>Vérification que vous n'est pas un robot à spam</legend>
+                <input type="radio" name="robot" id="robot_true" value="Oui" required>
+                <label for="robot_true">Je suis un robot</label>
+                <input type="radio" name="robot" id="robot_false" value="Non" required>
+                <label for="robot_false">Je ne suis pas un robot</label>
+            </fieldset>
+            <div class="buttons">
+                <button  value="submit" id="ok" value="ok">Confirmer</button> 
+                <button type="submit" value="nok" >Annuler</button> 
+            </div>
+        </form>
+    </div>
+    <script src="contact.js"></script>
+</body>
+</html>

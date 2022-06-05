@@ -1,0 +1,30 @@
+*{
+    margin: 5px;
+    font-size: 20px;
+}
+form{
+    width: 700px;
+    margin: auto;
+}
+#input_nom, #input_email{
+    width: 70%;
+}
+.autreoption_visible{
+    visibility: visible;
+    height: 29px;
+    width: 529px;
+}
+.autreoption_hidden{
+    visibility: hidden;
+    height: 0px;
+    width: 0px;
+}
+#textarea_message{
+    border-color: aqua;
+}
+.redColor{
+    border-color: red;
+}
+.greenColor{
+    border-color: green;
+}
